@@ -14,21 +14,36 @@ window.onload = () => {
 }
 
 
-document.querySelector('[title = "Tobey Maguire"]').onclick = () => 
-{
-    
+document.querySelector('[title = "Tobey Maguire"]').onclick = () => {
+
     document.getElementById("Tobey").classList.toggle("active");
+    changeNavVisibility();
 
-    document.getElementById("iconnav").style.visibility = "hidden";   
 }
 
 
 
 
-document.querySelector('[title = "Andrew Garfield"]').onclick = () => 
-{
-    
+document.querySelector('[title = "Andrew Garfield"]').onclick = () => {
+
     document.getElementById("Andrew").classList.toggle("active");
+    changeNavVisibility();
 
-    document.getElementById("iconnav").style.visibility = "hidden";   
+
 }
+
+
+const changeNavVisibility = () => {
+    
+    let a = document.getElementById("iconnav").style.visibility;
+
+
+            if (a == "visible") {
+                document.getElementById("iconnav").style.visibility = "hidden";
+            }
+            else {
+                document.getElementById("iconnav").style.visibility = "visible";
+            }
+    }
+
+
