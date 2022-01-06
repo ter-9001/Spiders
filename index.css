@@ -1,0 +1,243 @@
+nav
+{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    font-weight: 700;
+    
+}
+
+
+#brand
+{
+    
+    
+    background: url(https://images.hdqwalls.com/download/doctor-strange-in-spider-man-no-way-home-4k-rf-1680x1050.jpg);
+    position: absolute;
+    inset: 0; 
+    transform: translateY(50px);
+    background-size: cover;
+    
+}
+
+
+#brand.active
+{
+    transition: 1s;
+    transform: translateY(0);
+}
+
+
+
+
+#iconnav
+{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   z-index: 1000;
+   justify-content: end;
+   
+}
+
+#iconnav li a
+{
+    font-style: none;
+    color: white;
+    margin: 15px;
+    font-size: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+     
+}
+
+
+#iconnav li a span
+{
+    position: absolute;
+    z-index: 10;
+}
+
+
+#iconnav li a::before
+{
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   height: 100%;
+   background: #00fe73;
+   transition: 0.5s ease-in-out;
+   border-start-start-radius: 10%;
+   border-end-start-radius: 10%;
+}
+
+
+
+#iconnav li a::after
+{
+   position: absolute;
+   content: '';
+   top: 0;
+   right: 0;
+   height: 100%;
+   background: #00fe73;
+   transition: 0.5s ease-in-out;
+   border-start-end-radius: 10%;
+   border-end-end-radius: 10%;
+}
+
+#iconnav li a:hover:before,
+#iconnav li a:hover::after
+{
+   width: 50%;
+}
+
+
+#iconnav li a:hover
+{
+    color: white;
+}
+
+#iconnav li a span:nth-child(1)
+{
+    transition-delay: 0.25s;
+ 
+}
+
+
+#iconnav li a:hover span:nth-child(1)
+{
+  transition: 1s;  
+  transform: scale(0);
+  transition-delay: 0s;
+}
+
+#iconnav li a span:nth-child(2)
+{
+   transform: scale(3);
+   opacity: 0;
+}
+
+
+
+#iconnav li a:hover span:nth-child(2)
+{
+    transition: 1s;  
+    transform: scale(1);
+    transition-delay: 0s;
+    opacity: 1;
+}
+
+
+
+#spiders
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 75%;
+    z-index: 1000;
+}
+
+.spidericon
+{
+    width: 200px; 
+    height: 200px;  
+}
+
+
+.spidericon:hover
+{
+    transition: 1s;
+    width: 300px; height: 300px;
+    
+}
+
+
+#spiders abbr[title= 'Tobey Maguire'] .spidericon
+{
+    visibility: hidden;
+    transform: translateX(200px);
+}
+
+
+#spiders abbr[title= 'Andrew Garfield'] .spidericon
+{
+   visibility: hidden;
+   transform: translateX(-200px);
+   
+}
+
+#spiders abbr[title= 'Andrew Garfield'] .spidericon.active,
+#spiders abbr[title= 'Tobey Maguire']  .spidericon.active
+{
+    transition: 1.5s;
+    visibility: visible;
+    transform: translateX(0);
+    
+   
+}
+
+#spiders abbr[title= 'Tom Holland'] .spidericon.active
+{
+    transition: 1.5s;
+    transform: scale(1) translateY(0);
+}
+
+#spiders abbr[title= 'Tom Holland'] .spidericon
+{
+    transform: scale(3) translateY(-30px);
+    z-index: 1000;
+}
+
+
+#Andrew,
+#Tobey
+{
+  display: none;   
+}
+
+#Andrew.active,
+#Tobey.active
+{
+    position: absolute;
+    top: -50px; left: 50px;
+    width: 80%;
+    z-index: -1;
+    color: white;
+    margin: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.205);
+}
+
+#Andrew p,
+#Tobey p
+{
+    text-align: center;
+    font-size: 60px;
+
+}
+
+#Andrew h,
+#Tobey h
+{
+    text-align: justify;
+}
+
+
+
+#tobey1
+{
+   height: 400px;
+   float: right;
+   shape-outside: url(./tobey1.png);
+}
