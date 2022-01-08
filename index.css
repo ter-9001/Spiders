@@ -139,12 +139,14 @@ nav
 
 #spiders
 {
+    position: fixed;
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 75%;
+    position: fixed;
+    bottom: 0; left: 25%;
     z-index: 1000;
 }
 
@@ -157,6 +159,7 @@ nav
 
 .spidericon:hover
 {
+    opacity: 1;
     transition: 1s;
     width: 300px; height: 300px;
     
@@ -201,36 +204,48 @@ nav
 
 
 #Andrew,
-#Tobey
+#Tobey,
+#Tom
 {
   display: none;   
 }
 
 #Andrew.active,
-#Tobey.active
+#Tobey.active,
+#Tom.active
 {
     position: absolute;
-    top: -50px; left: 50px;
-    width: 80%;
+    top: -50px; 
+    left: 0; right: 0;
+    width: 100%;
     z-index: -1;
-    color: white;
+    color: aliceblue;
     margin: 0;
     display: block;
-    background: rgba(0, 0, 0, 0.205);
+    background: url(https://images.hdqwalls.com/download/doctor-strange-in-spider-man-no-way-home-4k-rf-1680x1050.jpg);
+    background-repeat: repeat-y;
 }
 
 #Andrew p,
-#Tobey p
+#Tobey p,
+#Tom p
 {
     text-align: center;
     font-size: 60px;
+    margin-top: 150px;
 
 }
 
 #Andrew h,
-#Tobey h
+#Tobey h,
+#Tom h
 {
     text-align: justify;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    width: 98%;
+    margin: 0 10px 0 10px;
 }
 
 

@@ -17,7 +17,11 @@ window.onload = () => {
 document.querySelector('[title = "Tobey Maguire"]').onclick = () => {
 
     document.getElementById("Tobey").classList.toggle("active");
-    changeNavVisibility();
+    document.getElementById("Andrew").classList.remove("active");
+    document.getElementById("Tom").classList.remove("active");
+    
+    document.getElementById("iconnav").style.visibility = "hidden"
+    //changeNavVisibility();
 
 }
 
@@ -27,23 +31,48 @@ document.querySelector('[title = "Tobey Maguire"]').onclick = () => {
 document.querySelector('[title = "Andrew Garfield"]').onclick = () => {
 
     document.getElementById("Andrew").classList.toggle("active");
-    changeNavVisibility();
+    document.getElementById("Tobey").classList.remove("active");
+    document.getElementById("Tom").classList.remove("active");
+
+    //changeNavVisibility();
 
 
 }
 
 
+document.querySelector('[title = "Tom Holland"]').onclick = () => {
+
+    document.getElementById("Tom").classList.toggle("active");
+    document.getElementById("Andrew").classList.remove("active");
+    document.getElementById("Tobey").classList.remove("active");
+    
+    //changeNavVisibility();
+
+}
+
+
+const toHome = () =>
+{
+    document.getElementById("Tom").classList.remove("active");
+    document.getElementById("Andrew").classList.remove("active");
+    document.getElementById("Tobey").classList.remove("active");
+    
+}
+
+
 const changeNavVisibility = () => {
     
-    let a = document.getElementById("iconnav").style.visibility;
-
-
-            if (a == "visible") {
-                document.getElementById("iconnav").style.visibility = "hidden";
-            }
-            else {
-                document.getElementById("iconnav").style.visibility = "visible";
-            }
+    var a = document.getElementById("iconnav").style.visibility;
+    
+    if(a == "hidden")
+    {
+        document.getElementById("iconnav").style.visibility = "visible";
     }
+    else
+    {
+        document.getElementById("iconnav").style.visibility = "hidden"
+    }
+            
+}
 
 
