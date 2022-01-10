@@ -12,9 +12,10 @@ nav
 {
     
     
-    background: url(https://images.hdqwalls.com/download/doctor-strange-in-spider-man-no-way-home-4k-rf-1680x1050.jpg);
+    background: url('./brand\ spiders.jpg');
     position: absolute;
-    inset: 0; 
+    top: 0;
+    width: 100%; height: 100%;
     transform: translateY(50px);
     background-size: cover;
     
@@ -141,12 +142,13 @@ nav
 {
     position: fixed;
     margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 0; left: 25%;
+    bottom: 0; 
     z-index: 1000;
 }
 
@@ -222,7 +224,7 @@ nav
     color: aliceblue;
     margin: 0;
     display: block;
-    background: url(https://images.hdqwalls.com/download/doctor-strange-in-spider-man-no-way-home-4k-rf-1680x1050.jpg);
+    background: url('./brand\ spiders.jpg');
     background-repeat: repeat-y;
 }
 
@@ -254,4 +256,104 @@ nav
    height: 400px;
    float: right;
    shape-outside: url(./tobey1.png);
+}
+
+#tinymenu
+{
+    display: none;
+
+}
+
+
+@media (max-width: 520px)
+{
+    .spidericon
+    {
+        width: 100px; 
+        height: 100px;  
+    }
+    
+    
+    .spidericon:hover
+    {
+        opacity: 1;
+        transition: 1s;
+        width: 200px; height: 200px;
+        
+    }
+
+
+    #iconnav
+    {
+        display: none;
+    }
+
+    #iconnav.active
+    {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 20%;
+        left: 20%;
+        transition: 0.5s;
+        background: rgba(0, 0, 0, 0.166);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    #iconnav.active li a
+    {
+        width: 200px;
+        border: 1px solid grey;
+    }
+
+    #tinymenu
+    {
+        display: block;
+        width: 70px;
+        height: 70px;
+        background: grey;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+
+
+    #tinymenu::before
+    {
+        content: "";
+        position: absolute;
+        background: white;
+        transform: translateY(10px);
+        width: 70px; height: 5px;
+        box-shadow: 0 25px 0 white;
+    }
+
+    
+    #tinymenu::after
+    {
+        content: "";
+        position: absolute;
+        background: white;
+        transform: translateY(60px);
+        width: 70px; height: 5px;
+        
+    }
+    
+    
+    #tinymenu.active::before
+    {
+        transition: 0.5s;
+        transform: translateY(30px) rotate(45deg);
+        box-shadow: none;
+    }
+
+    
+    #tinymenu.active::after
+    {
+        transition: 0.5s;
+        transform: translateY(30px) rotate(-45deg);
+    }
 }

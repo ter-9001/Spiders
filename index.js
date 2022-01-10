@@ -14,6 +14,14 @@ window.onload = () => {
 }
 
 
+document.querySelector("#tinymenu").onclick = () =>
+{
+    document.querySelector("#tinymenu").classList.toggle("active");
+    document.getElementById("iconnav").classList.toggle("active");
+}
+
+
+
 document.querySelector('[title = "Tobey Maguire"]').onclick = () => {
 
     document.getElementById("Tobey").classList.toggle("active");
